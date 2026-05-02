@@ -1,0 +1,22 @@
+.student-list-container {
+    padding: 32px;
+    flex: 1;
+}
+
+.student-list-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.student-count {
+    font-size: 0.9rem;
+    color: #a0a0c0;
+    margin-bottom: 20px;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}

@@ -1,10 +1,16 @@
+import "./Header.css";
+
 function Header() {
     return (
-        <header>
-            <h1>Student Directory</h1>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">About</a>
+        <header className="header">
+            <div className="header-logo">🌿 Student Directory</div>
+            <nav className="header-nav">
+                <a href="/" className="nav-link active">
+                    Home
+                </a>
+                <a href="/about" className="nav-link">
+                    About
+                </a>
             </nav>
         </header>
     );

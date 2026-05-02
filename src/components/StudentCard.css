@@ -1,0 +1,46 @@
+.card {
+    background-color: #ffffff;
+    color: #1a1a2e;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.card-detail {
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.card-detail span {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.select-btn {
+    margin-top: 10px;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+
+.select-btn:hover {
+    background-color: #5b21b6;
+}
+
+.select-btn.selected {
+    background-color: #4c1d95;
+}
