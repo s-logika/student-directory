@@ -1,7 +1,9 @@
 import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import StudentList from "./components/StudentList";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 const students = [
     {
@@ -60,7 +62,10 @@ function App() {
     return (
         <div>
             <Header />
-            <StudentList students={students} />
+            <Routes>
+                <Route path="/" element={<StudentList students={students} />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
             <Footer />
         </div>
     );
