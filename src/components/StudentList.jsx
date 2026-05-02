@@ -4,11 +4,19 @@ import StudentCard from "./StudentCard";
 
 function StudentList({ students }) {
     const [filter, setFilter] = useState("All");
+    const [search, setSearch] = useState("");
 
     const filteredStudents = students.filter((student) => {
-        if (filter === "Enrolled") return student.isActive === true;
-        if (filter === "Alumni") return student.isActive === false;
-        return true;
+        const matchesFilter =
+            filter === "All" ||
+            (filter === "Enrolled" && student.isActive === true) ||
+            (filter === "Alumni" && student.isActive === false);
+
+        const matchesSearch = student.name
+            .toLowerCase()
+            .includes(search.toLowerCase());
+
+        return matchesFilter && matchesSearch;
     });
 
     return (
@@ -23,6 +31,8 @@ function StudentList({ students }) {
                     className="search-input"
                     type="text"
                     placeholder="Search by name..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                 />
                 <button
                     className={`filter-btn ${filter === "All" ? "active" : ""}`}
