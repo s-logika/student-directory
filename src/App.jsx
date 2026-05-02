@@ -1,4 +1,4 @@
-import "./App.css";
+import { useEffect } from "react";
 import Header from "./components/Header";
 import StudentList from "./components/StudentList";
 import Footer from "./components/Footer";
@@ -49,6 +49,14 @@ const students = [
 ];
 
 function App() {
+    useEffect(() => {
+        console.log("Student Directory Loaded");
+    }, []);
+
+    useEffect(() => {
+        document.title = `${students.length} Students | Directory`;
+    }, []);
+
     return (
         <div>
             <Header />
