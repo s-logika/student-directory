@@ -44,3 +44,24 @@
 .select-btn.selected {
     background-color: #4c1d95;
 }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.badge-enrolled {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-alumni {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}

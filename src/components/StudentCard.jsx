@@ -3,6 +3,11 @@ import "./StudentCard.css";
 function StudentCard({ student }) {
     return (
         <div className="card">
+            {student.isActive ? (
+                <span className="badge badge-enrolled">✅ Enrolled</span>
+            ) : (
+                <span className="badge badge-alumni">🎓 Alumni</span>
+            )}
             <p className="card-name">{student.name}</p>
             <p className="card-detail">
                 <span>Age:</span> {student.age}
