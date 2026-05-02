@@ -20,3 +20,46 @@
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    background-color: #f3f4f6;
+    color: #1a1a2e;
+    min-width: 180px;
+}
+
+.search-input:focus {
+    outline: 2px solid #7c3aed;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #3b2f6e;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: #5b21b6;
+}
+
+.filter-btn.active {
+    background-color: #7c3aed;
+}
