@@ -1,10 +1,17 @@
 import "./App.css";
+import Header from "./components/Header";
+import StudentList from "./components/StudentList";
+import Footer from "./components/Footer";
+
+const students = [];
 
 function App() {
     return (
-        <>
-            <h1>Student Directory</h1>
-        </>
+        <div>
+            <Header />
+            <StudentList students={students} />
+            <Footer />
+        </div>
     );
 }
 
